@@ -21,7 +21,7 @@ const Post = (props) => {
         <div className={s.edit}><Link to={`/addpost/${props.id}/edit`}><img src={editIcon}></img></Link></div>
         <div className={s.delete} onClick={onClickDeletePost}><img src={deleteIcon}></img></div>
       </div> : ''}
-      <Link to={`/posts/${props.id}`}> <> <div className={s.image} ><img src={`${REACT_APP_API_URL}${props.imageUrl}`}></img></div>
+      <Link to={`/posts/${props.id}`}> <> <div className={s.image} ><img src={`${process.env.REACT_APP_API_URL}${props.imageUrl}`}></img></div>
         <div className={s.postInfo}>
             <div className={s.userInfo}>
                 <div className={s.avatar}><img src={props.avatar}></img></div>
