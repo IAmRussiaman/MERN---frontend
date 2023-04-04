@@ -1,0 +1,66 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-image: none;
+    background-color: rgb(232, 232, 232);
+    padding: 1rem ;
+    border-radius: 0 0 .3rem .3rem;
+    box-shadow: 0px 0px 37px 0px rgba(0,0,0,0.75);
+    .logo{
+        background: inherit;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 10%;
+            background-color: black;
+            font-weight: 700;
+            border-radius: .3rem;
+            color: rgba(0, 149, 243, 1);    
+            
+        }
+        .logo:hover{
+            background-color: rgba(0, 149, 243, 1);
+            color: white;
+            transition: .15s ease-in;
+        }
+
+    div{
+        background-image: none;
+    }
+    .authTrue {    
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .login{
+          margin-right: 2rem;
+        }
+       
+}
+}
+
+@media (max-width:414px){
+    *{
+        font-size: 60%;
+        
+    }
+    section {
+        width: 100%;
+  }
+  }
+@media (min-width: 415px) and (max-width:820px){
+    *{
+        font-size: 70%;
+        
+    }
+    section {
+        width: 100%;
+  }
+  
+}
+@media (min-width:821px) and (max-width:1240px){
+    section {
+        width: 90%;
+    }
+}
+  

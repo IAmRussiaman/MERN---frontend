@@ -1,0 +1,67 @@
+.container {
+    margin-top: 1rem;
+    min-height: 90vmin;
+    background-color: none;
+    display: grid;
+   place-items: center;
+   border-radius: .2rem;
+    .loginBox{
+        border-radius: .2rem;
+        border: .1rem solid rgba(0, 149, 243, 1);
+    width: 35%;
+    min-height: 30rem;
+    padding-bottom: 3rem;
+    background-image: linear-gradient(-225deg, rgb(232,232,232) 50%, white 50%);
+    display: flex;
+    justify-content: center;
+    header {
+        margin: 2rem auto 0 auto;
+        text-align: center;
+    }
+    header h2 {
+        font-size: 250%;
+        color: rgba(0, 149, 243, 1);
+    }
+    header p {letter-spacing: 0.05em;
+    margin-bottom: 2rem;}    
+    .inputs{
+        .logInput {
+            width: 80%;
+            background: #fff;
+            color: rgba(0, 149, 243, 1);
+            padding: 14.5px 0px 15px 9px;
+            border-radius: 5px 0px 0px 5px;
+            border: .2rem solid;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+      
+        .logInput:focus{
+            outline: none !important;
+            border-color: rgba(0, 149, 243, 1);
+            box-shadow: 0 0 10px #719ECE;
+        }
+    }
+    .buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 2rem;
+    }
+   }
+}
+@media (max-width:414px) {
+    .container .loginBox {
+        width: 50%;
+      
+    }
+    .container .loginBox header h2 {
+        font-size: 2rem;
+    }
+    .container .loginBox header p {
+        font-size: 1rem;
+    }
+}

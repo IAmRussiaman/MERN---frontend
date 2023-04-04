@@ -1,0 +1,163 @@
+  .post {
+        width: 100%;
+        border: 2px solid rgb(232, 232, 232);
+        display: flex;
+        flex-direction: column;
+        background-image: none;
+        background-color: rgb(232, 232, 232);
+        border-radius: .2rem;
+        margin-bottom: 1rem;
+        position: relative;
+        .box{
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            color: rgb(232, 232, 232);
+            text-align: center;
+            font-size: 1.2rem; 
+            font-weight: 600;
+            display: none;
+            .edit{
+                text-align: center;
+                background-color: rgb(232, 232, 232);
+                padding: .2rem .2rem 0 .2rem;             
+                border-radius: .3rem;
+                border: .2rem solid rgb(232, 232, 232);
+                margin-bottom: .5rem;             
+                a{
+                    img{
+                        width: 1.5rem;
+                        height: 1.5rem;                 
+                    }
+                }
+            }
+            .delete{
+                background-color: rgb(232, 232, 232);       
+                text-align: center;   
+                padding: .2rem .2rem 0 .2rem;
+                border-radius: .3rem;
+                border: .2rem solid rgb(232, 232, 232);
+                img{
+                    width: 1.5rem;
+                        height: 1.5rem;
+                }
+            }
+            .delete:hover{
+                cursor: pointer;
+                border-color: rgba(0, 149, 243, 1);
+            }
+            .edit:hover{
+                border-color: rgba(0, 149, 243, 1);
+            }
+        }
+        a {
+            background-image: none;
+                background-color: rgb(232, 232, 232);
+            color: inherit;
+            .image{
+                text-align: center;
+                img{
+                    max-width: 100%;
+                max-height: 25rem;
+                height: 25rem;
+                width: 100%;
+                border-radius: .5rem;
+                object-fit: cover;
+                }
+            }
+            .postInfo {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: -1rem;
+                
+                .userInfo{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    background-image: none;
+                    background-color: white;
+                    padding: .5rem 1rem;
+                    .avatar{
+                        width: 3rem;
+                        height: 3rem;
+                        background-image: none;
+                    background-color: white;
+                    
+                        img{
+                            width: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+                    .username{
+                        width: calc((100% - 4rem)/2);
+                        text-align: left;
+                        background-image: none;
+                    background-color: white;
+                    font-weight: 700;
+                    font-size: .9em;
+                    }
+                    .date{
+                        width: calc((100% - 4rem)/2);
+                        text-align: right;
+                        background-image: none;
+                    background-color: white;
+                    font-weight: 600;
+                    font-size: .8em;
+                    color: rgba(0, 149, 243, 1);
+                    }
+                }
+                .title{
+                    width: 100%;
+                    background-image: none;
+                    background-color: white;
+                    padding: .1rem 1rem;
+                    font-size: 1.7rem;
+                    font-weight: 700;
+                }
+                .tags{
+                    display: flex;
+                    flex-direction: row;
+                    background-image: none;
+                    background-color: white;
+                    color: rgba(0, 149, 243, 1);
+                    padding: 0 1rem;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    span{
+                        background-image: none;
+                        background-color: white;
+                        margin-right: .5rem;
+                    }
+                }
+                .viewsCount{
+                    background-image: none;
+                    background-color: white;
+                    padding: .5rem 1rem;
+                    display: flex;
+                    align-items: center;
+                    font-size: 0.7rem;
+                    font-weight: 700;
+                    img{
+                        background-image: none;
+                        background-color: white;
+                        width: 1rem;
+                        height: 1rem;
+                        margin-right: .2rem;
+                    }
+                }
+            }
+        }
+        }
+
+
+        
+    .post:hover{
+        border-color: rgba(0, 149, 243, 1);
+     
+        .box{
+            display: block;
+            
+        }
+    }

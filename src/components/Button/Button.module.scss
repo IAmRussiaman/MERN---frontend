@@ -1,0 +1,28 @@
+button {
+  padding: .5rem 1rem;
+  background-image: none;
+  display: flex;
+  min-width: 7rem;
+  align-items: center;
+  justify-content: center;
+  border: .2rem solid rgba(0, 149, 243, 1);
+  font-weight: 700;
+ }
+ button:hover{
+  background-color: rgba(0, 149, 243, 1);
+  color: black;
+  cursor: pointer;
+  transition:  linear .1s;
+  border-color: black;
+ }
+ @media (max-width:414px){
+  button {
+    font-size: 0.8rem;
+  }
+}
+ @media (min-width:415px) and (max-width:820px){
+  button {
+    font-size: .8rem;
+  }
+}
+ 

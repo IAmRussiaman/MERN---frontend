@@ -1,0 +1,117 @@
+.post {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(232,232,232);
+    margin:1rem 0;
+    border-radius: .2rem;
+    .image{
+        
+        img{
+         width: 100%;
+        max-height: 30rem;
+        height: 30rem;
+        border-radius: .5rem;
+        object-fit: contain;
+        }
+    }
+    .postInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: -1rem;
+        
+        .userInfo{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-image: none;
+            background-color: white;
+            padding: .5rem 1rem;
+            .avatar{
+                width: 3rem;
+                height: 3rem;
+                background-image: none;
+            background-color: white;
+            
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+            .username{
+                width: calc((100% - 4rem)/2);
+                text-align: left;
+                background-image: none;
+            background-color: white;
+            font-weight: 700;
+            font-size: .9em;
+            }
+            .date{
+                width: calc((100% - 4rem)/2);
+                text-align: right;
+                background-image: none;
+            background-color: white;
+            font-weight: 600;
+            font-size: .8em;
+            color: rgba(0, 149, 243, 1);
+            }
+        }
+        .title{
+            width: 100%;
+            background-image: none;
+            background-color: white;
+            padding: .1rem 1rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .tags{
+            display: flex;
+            flex-direction: row;
+            background-image: none;
+            background-color: white;
+            color: rgba(0, 149, 243, 1);
+            padding: 0 1rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            span{
+                background-image: none;
+                background-color: white;
+                margin-right: .5rem;
+            }
+        }
+        .text{
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: .5rem 1rem;
+            text-align: left;
+            background-image: none;
+            background-color: white;
+        }
+        .viewsCount{
+            background-image: none;
+            background-color: white;
+            padding: .5rem 1rem;
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            img{
+                background-image: none;
+                background-color: white;
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: .3rem;
+            }
+        }
+    }
+}
+.box{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(232,232,232);
+    margin-top: 1rem;
+}

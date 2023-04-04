@@ -1,0 +1,73 @@
+.section{
+    background-color: rgb(232,232,232);
+    margin-top: 1rem;
+    border-radius: .3rem;
+    .addPostButton{
+        margin:1rem 1.8rem
+    }
+    padding-bottom: 1rem;
+}
+.addPostBox{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 1rem 0rem;
+    .uploadButton{
+        margin-left: .8rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .deleteButton{
+        background-color: red;
+        margin-left: .5rem;
+        color: white;
+        border-color: black;
+        opacity: .8;
+    }
+    .deleteButton:hover{
+        opacity: 1;
+    }
+    .boximage{
+        text-align: center;
+        width: 100%;
+        margin-top: 1rem;
+       
+        img{
+            width: 50%;   
+           object-fit: contain;
+        }
+    }
+    .title{
+        padding: .8rem .8rem 0rem .8rem;
+         font-size: 2rem;
+         border: .2rem solid #e8e8e8;
+         background-color: #e8e8e8;
+         color: #00c0f3;
+         border-style: solid;
+         border-radius: .3rem;
+         
+         margin-bottom: 1rem;
+         font-weight: 700;
+    }
+    .title:focus{
+        outline: none;
+    }
+    .tags{
+        padding: 0rem .5rem .5rem .8rem;
+         font-size: 1rem;
+         border: .2rem solid #e8e8e8;
+         background-color: #e8e8e8;
+         color: #00c0f3;
+         border-style: solid;
+         border-radius: .3rem;
+         border-bottom: .2rem solid lightgray;
+         margin-bottom: 1rem;
+         font-weight: 700;
+         color: black;
+    }
+    .tags:focus{
+        outline: none;
+    }
+    
+}
+
