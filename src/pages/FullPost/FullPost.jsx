@@ -10,7 +10,7 @@ const FullPost = () => {
   const [load,setLoad] = useState(false)
   const {id} = useParams()
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}/posts/${id}`).then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}posts/${id}`).then((res) => {
       setData(res.data)
       setLoad(true)
     }).catch(err => {
