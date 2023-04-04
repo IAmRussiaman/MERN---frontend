@@ -21,7 +21,7 @@ const FullPost = () => {
   
   return <>
   {load ? (<section><div className={s.post}>
-    <div className={s.image} ><img src={`${process.env.REACT_APP_API_URL}/${data.imageUrl}`}></img></div>
+    <div className={s.image} ><img src={`${process.env.REACT_APP_API_URL}/uploads/${data.imageUrl}`}></img></div>
     <div className={s.postInfo}>
         <div className={s.userInfo}>
             <div className={s.avatar}><img src={data.user.avatarUrl}></img></div>
