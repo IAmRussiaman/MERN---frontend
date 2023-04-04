@@ -10,7 +10,7 @@ const FullPost = () => {
   const [load,setLoad] = useState(false)
   const {id} = useParams()
   useEffect(() => {
-    axios.get(`${process.env.REACT_APP_API_URL}posts/${id}`).then((res) => {
+    axios.get(`${process.env.REACT_APP_API_URL}/posts/${id}`).then((res) => {
       setData(res.data)
       setLoad(true)
     }).catch(err => {
@@ -21,7 +21,7 @@ const FullPost = () => {
   
   return <>
   {load ? (<section><div className={s.post}>
-    <div className={s.image} ><img src={`${process.env.REACT_APP_API_URL}${data.imageUrl}`}></img></div>
+    <div className={s.image} ><img src={`${process.env.REACT_APP_API_URL}/${data.imageUrl}`}></img></div>
     <div className={s.postInfo}>
         <div className={s.userInfo}>
             <div className={s.avatar}><img src={data.user.avatarUrl}></img></div>

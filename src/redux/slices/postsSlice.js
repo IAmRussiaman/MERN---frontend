@@ -1,22 +1,22 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from '../../axios';
 export const fetchPosts = createAsyncThunk('/posts/fetchPosts', async () => {
-  const { data } = await axios.get('posts');
+  const { data } = await axios.get('/posts');
   return data;
 });
 export const fetchPostsByPopularity = createAsyncThunk(
   '/posts/fetchPostsByPopularity',
   async () => {
-    const { data } = await axios.get('posts/popular');
+    const { data } = await axios.get('/posts/popular');
     return data;
   },
 );
 export const fetchTags = createAsyncThunk('/tags', async () => {
-  const { data } = await axios.get('tags');
+  const { data } = await axios.get('/tags');
   return data;
 });
 export const deletePost = createAsyncThunk('/deletePost', async (id) => {
-  axios.delete(`posts/${id}`);
+  axios.delete(`/posts/${id}`);
 });
 const initialState = {
   posts: {

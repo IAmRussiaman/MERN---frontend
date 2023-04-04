@@ -36,7 +36,7 @@ const AddPost = () => {
       try {
         const formData = new FormData();
         formData.append('image',e.target.files[0])
-        const {data} = await axios.post('upload',formData)
+        const {data} = await axios.post('/upload',formData)
         setImageUrl(data.url)
       } catch (err) {
         console.log('Error while uploading file')
@@ -51,13 +51,13 @@ const AddPost = () => {
       imageUrl,
       text,   
     };
-    const {data} = isEditing ? await axios.patch(`posts/${id}`,fields): await axios.post('posts', fields)
+    const {data} = isEditing ? await axios.patch(`/posts/${id}`,fields): await axios.post('/posts', fields)
     const newId = isEditing ? id : data._id;
     navigate(`/posts/${newId}`)
   }
   useEffect(() => {
    if(id){
-    axios.get(`posts/${id}`).then(({data}) => {
+    axios.get(`/posts/${id}`).then(({data}) => {
       setText(data.text);
       setTitle(data.title);
       setImageUrl(data.imageUrl);
