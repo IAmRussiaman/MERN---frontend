@@ -32,14 +32,24 @@ const AddPost = () => {
     }),
     [],
   );
-    const handleUrlImage = async(e) => {
-      try {
+    const handleUrlImage = (e) => {
+      const file = e.target.files[0];
+      setFileToBase(file);
+
+      /*try {
         const formData = new FormData();
         formData.append('image',e.target.files[0])
         const {data} = await axios.post('/upload',formData)
         setImageUrl(data.url)
       } catch (err) {
         console.log('Error while uploading file')
+      }*/
+    }
+    const setFileToBase = (file) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onloadend = () => {
+        setImageUrl(reader.result)
       }
     }
    const isEditing = Boolean(id)
