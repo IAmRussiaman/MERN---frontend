@@ -35,7 +35,7 @@ const AddPost = () => {
     const handleUrlImage = (e) => {
       const file = e.target.files[0];
       setFileToBase(file);
-
+      console.log(file)
       /*try {
         const formData = new FormData();
         formData.append('image',e.target.files[0])
@@ -86,7 +86,7 @@ const AddPost = () => {
         <input type='file' ref={inputFileRef} onChange={handleUrlImage} hidden></input>
         {imageUrl && (<div><button className={s.deleteButton}>Delete image</button></div>)}
         </div>
-        {imageUrl && (<div className={s.boximage}><img src={`${process.env.REACT_APP_API_URL}${imageUrl}`}></img></div>)}
+        {imageUrl && (<div className={s.boximage}><img src={/*`${process.env.REACT_APP_API_URL}${imageUrl}`*/ imageUrl}></img></div>)}
       <input type="text" class={s.title} placeholder="Enter your blog title..." value={title} onChange={(e) => setTitle(e.target.value)}/>
       <input type="text" class={s.tags} placeholder="Tags" value={tagss} onChange={(e) => setTags(e.target.value)}/>
       <div><SimpleMDE className={s.editor} value={text} onChange={onChange} options={options}  /></div></div>
