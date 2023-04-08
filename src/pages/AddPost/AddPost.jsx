@@ -32,18 +32,27 @@ const AddPost = () => {
     }),
     [],
   );
-    const handleUrlImage = (e) => {
+    const handleUrlImage = async(e) => {
       const file = e.target.files[0];
       setFileToBase(file);
       console.log(file)
-      /*try {
+      try {
         const formData = new FormData();
-        formData.append('image',e.target.files[0])
-        const {data} = await axios.post('/upload',formData)
-        setImageUrl(data.url)
+        formData.append('file',e.target.files[0])
+        formData.append(
+          "upload_preset",
+          process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET
+        );
+        const {data} = await axios
+        .post(
+          `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`,
+          formData
+        )
+        setImageUrl(data.secure_url)
+        console.log(data)
       } catch (err) {
         console.log('Error while uploading file')
-      }*/
+      }
     }
     const setFileToBase = (file) => {
       const reader = new FileReader();
