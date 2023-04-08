@@ -46,7 +46,7 @@ const AddPost = () => {
         const {data} = await axios
         .post(
           `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`,
-          formData,{withCredentials: false}
+          formData,{withCredentials: true}
         )
         setImageUrl(data.secure_url)
         console.log(data)
