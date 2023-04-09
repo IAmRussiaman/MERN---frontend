@@ -33,32 +33,15 @@ const AddPost = () => {
     [],
   );
     const handleUrlImage = async(e) => {
-      const file = e.target.files[0];
-      setFileToBase(file);
-      console.log(file)
+    
       try {
         const formData = new FormData();
-        formData.append('file',e.target.files[0])
-        formData.append(
-          "upload_preset",
-          process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET
-        );
-        const {data} = await axios
-        .post(
-          `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`,
-          formData,{withCredentials: true}
-        )
-        setImageUrl(data.secure_url)
+        formData.append('image',e.target.files[0])
+        const {data} = await axios.post('/upload',formData)
+        setImageUrl(data.url)
         console.log(data)
       } catch (err) {
         console.log('Error while uploading file')
-      }
-    }
-    const setFileToBase = (file) => {
-      const reader = new FileReader();
-      reader.readAsDataURL(file);
-      reader.onloadend = () => {
-        setImageUrl(reader.result)
       }
     }
    const isEditing = Boolean(id)
@@ -95,7 +78,7 @@ const AddPost = () => {
         <input type='file' ref={inputFileRef} onChange={handleUrlImage} hidden></input>
         {imageUrl && (<div><button className={s.deleteButton}>Delete image</button></div>)}
         </div>
-        {imageUrl && (<div className={s.boximage}><img src={/*`${process.env.REACT_APP_API_URL}${imageUrl}`*/ imageUrl}></img></div>)}
+        {imageUrl && (<div className={s.boximage}><img src={`${process.env.REACT_APP_API_URL}${imageUrl}`}></img></div>)}
       <input type="text" class={s.title} placeholder="Enter your blog title..." value={title} onChange={(e) => setTitle(e.target.value)}/>
       <input type="text" class={s.tags} placeholder="Tags" value={tagss} onChange={(e) => setTags(e.target.value)}/>
       <div><SimpleMDE className={s.editor} value={text} onChange={onChange} options={options}  /></div></div>
