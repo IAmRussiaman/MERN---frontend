@@ -17,7 +17,7 @@ const Home = () => {
   }, [])
   
   let result = posts.map((elem,key) => {
-    return <Post id={elem._id} isEditable={userData?._id == elem.user._id} title={elem.title} date={elem.createdAt} avatar={elem.user.avatarUrl} username={elem.user.fullName} tags={elem.tags} viewsCount = {elem.viewsCount} imageUrl={elem.imageUrl}/>
+    return <Post id={elem._id} isEditable={userData?._id == elem.user._id} title={elem.title} date={elem.createdAt} avatar={elem.user.avatarUrl} username={elem.user.fullName} tags={elem.tags} viewsCount = {elem.viewsCount} imageUrl={elem.imageUrl} cloud={elem.cloud}/>
   })
   let resultTags = tags.map((elem,key) => {
     return <div><span>#{elem}</span></div>
