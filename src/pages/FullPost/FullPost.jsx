@@ -13,6 +13,7 @@ const FullPost = () => {
     axios.get(`${process.env.REACT_APP_API_URL}/posts/${id}`).then((res) => {
       setData(res.data)
       setLoad(true)
+      console.log(res.data)
     }).catch(err => {
       alert(`cant get full post ${err}`) 
     })
