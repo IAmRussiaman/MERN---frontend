@@ -49,13 +49,18 @@
   }
     .header{
         a{
-            width: 60%;      
+               
                 div{
                     font-size: 1rem;
                     text-align: center;
                
                 padding: .5rem 1rem;
                 }       
+        }
+    }
+    .header{
+        .logo{
+            width: 30%;
         }
     }
   
