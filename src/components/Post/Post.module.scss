@@ -1,11 +1,11 @@
 @import '../../styles/variables.scss';
   .post {
         width: 100%;
-        border: 2px solid $lightGrey;
+        border: 2px solid $lightGray;
         display: flex;
         flex-direction: column;
         background-image: none;
-        background-color: $lightGrey;
+        background-color: $lightGray;
         border-radius: .2rem;
         margin-bottom: 1rem;
         position: relative;
@@ -13,17 +13,17 @@
             position: absolute;
             top: 1rem;
             right: 1rem;
-            color: $lightGrey;
+            color: $lightGray;
             text-align: center;
             font-size: 1.2rem; 
             font-weight: 600;
             display: none;
             .edit{
                 text-align: center;
-                background-color: $lightGrey;
+                background-color: $lightGray;
                 padding: .2rem .2rem 0 .2rem;             
                 border-radius: .3rem;
-                border: .2rem solid $lightGrey;
+                border: .2rem solid $lightGray;
                 margin-bottom: .5rem;             
                 a{
                     img{
@@ -33,11 +33,11 @@
                 }
             }
             .delete{
-                background-color: $lightGrey;       
+                background-color: $lightGray;       
                 text-align: center;   
                 padding: .2rem .2rem 0 .2rem;
                 border-radius: .3rem;
-                border: .2rem solid $lightGrey;
+                border: .2rem solid $lightGray;
                 img{
                     width: 1.5rem;
                         height: 1.5rem;
@@ -53,7 +53,7 @@
         }
         a {
             background-image: none;
-                background-color: $lightGrey;
+                background-color: $lightGray;
             color: inherit;
             .image{
                 text-align: center;
