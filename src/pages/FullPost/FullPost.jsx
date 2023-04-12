@@ -2,9 +2,9 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import {useParams} from 'react-router-dom'
 import s from './FullPost.module.scss'
-
 import views from '../../assets/eye-solid.svg'
 import Loader from '../../components/Loader/Loader'
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
 const FullPost = () => {
   const [data,setData] = useState()
   const [load,setLoad] = useState(false)
@@ -33,7 +33,7 @@ const FullPost = () => {
         <div className={s.tags}>{data.tags.map(elem =>{
             return <span>#{elem} </span>
         })} </div>
-        <div className={s.text}>{data.text}</div>
+        <div className={s.text}><ReactMarkdown children={data.text}></ReactMarkdown></div>
         <div className={s.viewsCount}><img src={views}></img>{data.viewsCount}</div>
     </div>
 </div></section>) : <section><div className={s.box}><Loader/></div></section>}
