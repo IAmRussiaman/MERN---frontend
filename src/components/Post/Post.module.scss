@@ -163,5 +163,13 @@
     }
 
     @media (max-width:414px){
-       
+       .post{
+            a{
+                .postInfo{
+                    .tags{
+                        font-size: 2rem;
+                    }
+                }
+            }
+       }
     }
