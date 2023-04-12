@@ -1,3 +1,4 @@
+@import '../../styles/variables.scss';
 button {
   padding: .5rem 1rem;
   background-image: none;
@@ -5,11 +6,11 @@ button {
   min-width: 7rem;
   align-items: center;
   justify-content: center;
-  border: .2rem solid rgba(0, 149, 243, 1);
+  border: .2rem solid $blue;
   font-weight: 700;
  }
  button:hover{
-  background-color: rgba(0, 149, 243, 1);
+  background-color: $blue;
   color: black;
   cursor: pointer;
   transition:  linear .1s;

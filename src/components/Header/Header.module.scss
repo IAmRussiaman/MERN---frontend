@@ -1,8 +1,9 @@
+@import '../../styles/variables.scss';
 .header {
     display: flex;
     justify-content: space-between;
     background-image: none;
-    background-color: rgb(232, 232, 232);
+    background-color: $lightGrey;
     padding: 1rem ;
     border-radius: 0 0 .3rem .3rem;
     box-shadow: 0px 0px 37px 0px rgba(0,0,0,0.75);
@@ -15,45 +16,37 @@
             background-color: black;
             font-weight: 700;
             border-radius: .3rem;
-            color: rgba(0, 149, 243, 1);    
-            
+            color: $blue;          
         }
         .logo:hover{
-            background-color: rgba(0, 149, 243, 1);
+            background-color: $blue;
             color: white;
             transition: .15s ease-in;
         }
-
     div{
         background-image: none;
     }
-    .authTrue {    
-        
+    .authTrue {           
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         .login{
           margin-right: 2rem;
-        }
-       
+        }      
 }
 }
-
 @media (max-width:414px){
     *{
-        font-size: 60%;
-        
+        font-size: 60%;       
     }
     section {
         width: 100%;
   }
     .header{
-        a{
-               
+        a{            
                 div{
                     font-size: 1rem;
-                    text-align: center;
-               
+                    text-align: center;              
                 padding: .5rem 1rem;
                 }       
         }
@@ -62,18 +55,15 @@
         .logo{
             width: 20%;
         }
-    }
-  
+    } 
   }
 @media (min-width: 415px) and (max-width:820px){
     *{
-        font-size: 70%;
-        
+        font-size: 70%;      
     }
     section {
         width: 100%;
   }
-  
 }
 @media (min-width:821px) and (max-width:1240px){
     section {

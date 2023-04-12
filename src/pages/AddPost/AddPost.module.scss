@@ -1,5 +1,6 @@
+@import '../../styles/variables.scss';
 .section{
-    background-color: rgb(232,232,232);
+    background-color: $lightGray;
     margin-top: 1rem;
     border-radius: .3rem;
     .addPostButton{
@@ -40,9 +41,9 @@
     .title{
         padding: .8rem .8rem 0rem .8rem;
          font-size: 2rem;
-         border: .2rem solid #e8e8e8;
-         background-color: #e8e8e8;
-         color: #00c0f3;
+         border: .2rem solid $lightGray;
+         background-color: $lightGray;
+         color: $blue;
          border-style: solid;
          border-radius: .3rem;
          
@@ -55,9 +56,9 @@
     .tags{
         padding: 0rem .5rem .5rem .8rem;
          font-size: 1rem;
-         border: .2rem solid #e8e8e8;
-         background-color: #e8e8e8;
-         color: #00c0f3;
+         border: .2rem solid $lightGray;
+         background-color: $lightGray;
+         color: $blue;
          border-style: solid;
          border-radius: .3rem;
          border-bottom: .2rem solid lightgray;
